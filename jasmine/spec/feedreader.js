@@ -108,8 +108,10 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(1, function() {
                 $lastFeed = $('.feed').text();
+                console.log('Feed1 loaded!');
                 loadFeed(2, function() {
                     $currentFeed = $('.feed').text();
+                    console.log('Feed2 loaded!');
                     done();
                 });
             });
